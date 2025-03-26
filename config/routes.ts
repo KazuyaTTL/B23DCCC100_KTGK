@@ -1,104 +1,98 @@
-﻿export default [
+export default [
 	{
-		path: '/user',
-		layout: false,
-		routes: [
-			{
-				path: '/user/login',
-				layout: false,
-				name: 'login',
-				component: './user/Login',
-			},
-			{
-				path: '/user',
-				redirect: '/user/login',
-			},
-		],
-	},
-
-	///////////////////////////////////
-	// DEFAULT MENU
-	{
-		path: '/dashboard',
-		name: 'Dashboard',
-		component: './TrangChu',
-		icon: 'HomeOutlined',
+	  path: '/user',
+	  layout: false,
+	  routes: [
+		{
+		  path: '/user/login',
+		  layout: false,
+		  name: 'login',
+		  component: './user/Login',
+		},
+		{
+		  path: '/user',
+		  redirect: '/user/login',
+		},
+	  ],
 	},
 	{
-		path: '/gioi-thieu',
-		name: 'About',
-		component: './TienIch/GioiThieu',
-		hideInMenu: true,
+	  path: '/dashboard',
+	  name: 'Dashboard',
+	  component: './TrangChu',
+	  icon: 'HomeOutlined',
 	},
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
+	  path: '/gioi-thieu',
+	  name: 'About',
+	  component: './TienIch/GioiThieu',
+	  hideInMenu: true,
 	},
 	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
+	  path: '/random-user',
+	  name: 'RandomUser',
+	  component: './RandomUser',
+	  icon: 'ArrowsAltOutlined',
 	},
 	{
-		path: '/thuc-hanh-3',
-		name: 'THỰC HÀNH 3',
-		icon: 'OrderedListOutlined',
-		component: './ThucHanh3',
-	},
-
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
-
-	{
-		path: '/notification',
-		routes: [
-			{
-				path: './subscribe',
-				exact: true,
-				component: './ThongBao/Subscribe',
-			},
-			{
-				path: './check',
-				exact: true,
-				component: './ThongBao/Check',
-			},
-			{
-				path: './',
-				exact: true,
-				component: './ThongBao/NotifOneSignal',
-			},
-		],
-		layout: false,
-		hideInMenu: true,
+	  path: '/todo-list',
+	  name: 'TodoList',
+	  icon: 'OrderedListOutlined',
+	  component: './TodoList',
 	},
 	{
-		path: '/',
+	  path: '/auto-message',
+	  name: 'AutoMessage',
+	  icon: 'MessageOutlined',
+	  component: './AutoMessage',
 	},
 	{
-		path: '/403',
-		component: './exception/403/403Page',
-		layout: false,
+	  path: '/phong-hoc',
+	  name: 'Phòng học',
+	  icon: 'BankOutlined',
+	  component: './PhongHoc',
 	},
 	{
-		path: '/hold-on',
-		component: './exception/DangCapNhat',
-		layout: false,
+	  path: '/khoa-hoc',
+	  name: 'Quản lý khóa học',
+	  icon: 'BookOutlined',
+	  component: './KhoaHoc',
 	},
 	{
-		component: './exception/404',
+	  path: '/notification',
+	  routes: [
+		{
+		  path: './subscribe',
+		  exact: true,
+		  component: './ThongBao/Subscribe',
+		},
+		{
+		  path: './check',
+		  exact: true,
+		  component: './ThongBao/Check',
+		},
+		{
+		  path: './',
+		  exact: true,
+		  component: './ThongBao/NotifOneSignal',
+		},
+	  ],
+	  layout: false,
+	  hideInMenu: true,
 	},
-];
+	{
+	  path: '/',
+	},
+	{
+	  path: '/403',
+	  component: './exception/403/403Page',
+	  layout: false,
+	},
+	{
+	  path: '/hold-on',
+	  component: './exception/DangCapNhat',
+	  layout: false,
+	},
+	{
+	  component: './exception/404',
+	},
+  ];
